@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from "fs";
 
 export async function checkFileExists(file: string): Promise<boolean> {
   return fs.promises
