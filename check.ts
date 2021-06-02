@@ -36,5 +36,3 @@ readPkg(extensionPath).then((pkg: any) => {
     })
     .catch(console.error);
 });
-
-// `Update available: ${res.current} → ${res.latest}. Run \`npm install -g ${res.name}\``
