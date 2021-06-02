@@ -25,14 +25,16 @@ readPkg(extensionPath).then((pkg: any) => {
     return;
   }
 
-  return checkNpm(pkg).then((res) => {
-    // Store the latest version in the cache for one day
-    conf.set(res.name, res.latest, { maxAge: ONE_DAY });
+  return checkNpm(pkg)
+    .then((res) => {
+      // Store the latest version in the cache for one day
+      conf.set(res.name, res.latest, { maxAge: ONE_DAY });
 
-    if (!semver.eq(res.latest, res.current)) {
-      return markLatest(extensionPath, res.latest);
-    }
-  });
+      if (!semver.eq(res.latest, res.current)) {
+        return markLatest(extensionPath, res.latest);
+      }
+    })
+    .catch(console.error);
 });
 
 // `Update available: ${res.current} → ${res.latest}. Run \`npm install -g ${res.name}\``

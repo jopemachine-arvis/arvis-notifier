@@ -13,7 +13,7 @@ export default async (dir: string, latestVersion: string) => {
     file = pluginFile;
   } else {
     console.error('It seems project is not arvis-extension');
-    process.exit(1);
+    return;
   }
 
   return fse.readJSON(file).then((json) => {
@@ -23,7 +23,7 @@ export default async (dir: string, latestVersion: string) => {
       json.latest = latestVersion;
     } else {
       console.error('It seems project is not arvis-extension');
-      process.exit(1);
+      return;
     }
 
     fse.writeJSON(file, json);

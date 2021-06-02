@@ -16,10 +16,11 @@ $ npm install --save arvis-notifier
 
 ```js
 const arvish = require('arvish');
-const versionCheck = require('arvis-notifier');
+
+const { checkUpdate } = require('arvis-notifier');
 
 // Checks for available update
-versionCheck();
+checkUpdate();
 
 arvish.output([
 	{title: '🦄'},
