@@ -1,0 +1,45 @@
+{
+  "name": "@jopemachine/arvis-notifier",
+  "version": "0.0.1",
+  "description": "Update notifications for Arvis extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "files": [
+    "dist/**",
+    "README.md",
+    "package.json",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jopemachine/arvis-notifier.git"
+  },
+  "keywords": [
+    "arvis",
+    "arvish"
+  ],
+  "author": "jopemachine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jopemachine/arvis-notifier/issues"
+  },
+  "homepage": "https://github.com/jopemachine/arvis-notifier#readme",
+  "devDependencies": {
+    "@types/execa": "^2.0.0",
+    "@types/fs-extra": "^9.0.11",
+    "@types/node": "^15.6.1",
+    "@types/semver": "^7.3.6",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "cache-conf": "^0.6.0",
+    "execa": "^5.0.1",
+    "fs-extra": "^10.0.0",
+    "latest-version": "^5.1.0",
+    "read-pkg": "^2.0.0",
+    "semver": "^7.3.5"
+  }
+}
