@@ -2,7 +2,6 @@
 import readPkg from "read-pkg";
 import latestVersion from "latest-version";
 import semver from "semver";
-import execa from "execa";
 import CacheConf from "cache-conf";
 import markLatest from "./lib/markLatest";
 

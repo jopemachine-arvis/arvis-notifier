@@ -1,8 +1,8 @@
 {
   "name": "@jopemachine/arvis-notifier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Update notifications for Arvis extension",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
@@ -28,7 +28,6 @@
   },
   "homepage": "https://github.com/jopemachine/arvis-notifier#readme",
   "devDependencies": {
-    "@types/execa": "^2.0.0",
     "@types/fs-extra": "^9.0.11",
     "@types/node": "^15.6.1",
     "@types/semver": "^7.3.6",
@@ -36,7 +35,6 @@
   },
   "dependencies": {
     "cache-conf": "^0.6.0",
-    "execa": "^5.0.1",
     "fs-extra": "^10.0.0",
     "latest-version": "^5.1.0",
     "read-pkg": "^2.0.0",
