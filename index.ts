@@ -1,12 +1,14 @@
 import path from "path";
-import cp from "child_process";
+import execa from "execa";
 import fs from "fs";
 
 export const checkUpdate = () => {
-  fs.chmod(path.join(__dirname, "check.js"), 0o777, () => {
-    const subProcess = cp.spawn(path.join(__dirname, "check.js"), [], {
+  fs.chmod(path.resolve(__dirname, "check.js"), 0o777, () => {
+    const subProcess = execa.command(`node check.js"`, {
+      windowsHide: true,
+      cwd: path.resolve(__dirname, "dist"),
       detached: true,
-      stdio: "ignore",
+      stdio: 'ignore',
     });
     subProcess.unref();
   });
