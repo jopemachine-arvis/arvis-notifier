@@ -16,9 +16,11 @@ const checkNpm = (pkg: any) =>
     name: pkg.name,
   }));
 
-pkgDir().then(async (extensionPath: any) => {
-  const pkg = await fse.readJSON(path.resolve(extensionPath, "package.json"));
+const temp = __dirname.split(path.sep);
+const outer = temp.slice(0, temp.length - 2).join(path.sep);
 
+pkgDir(outer).then(async (extensionPath: any) => {
+  const pkg = await fse.readJSON(path.resolve(extensionPath, "package.json"));
   const conf = new CacheConf({ projectName: pkg.name });
 
   if (conf.has(pkg.name)) {
