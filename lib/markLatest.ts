@@ -2,9 +2,9 @@ import path from "path";
 import fse from "fs-extra";
 import { checkFileExists } from "./util";
 
-export default async (dir: string, latestVersion: string) => {
-  const workflowFile = path.join(dir, "arvis-workflow.json");
-  const pluginFile = path.join(dir, "arvis-plugin.json");
+export default async (extensionPath: string, latestVersion: string) => {
+  const workflowFile = path.resolve(extensionPath, "arvis-workflow.json");
+  const pluginFile = path.resolve(extensionPath, "arvis-plugin.json");
 
   let file = "";
   if (await checkFileExists(workflowFile)) {

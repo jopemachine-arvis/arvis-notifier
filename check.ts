@@ -1,16 +1,13 @@
 #!/usr/bin/env node
-import readPkg from "read-pkg";
+import pkgDir from "pkg-dir";
 import latestVersion from "latest-version";
 import semver from "semver";
 import CacheConf from "cache-conf";
 import markLatest from "./lib/markLatest";
-
-const pkg = require("./package.json");
+import fse from "fs-extra";
+import path from "path";
 
 const ONE_DAY = 86400000;
-
-const extensionPath = process.cwd();
-const conf = new CacheConf({ projectName: pkg.name });
 
 const checkNpm = (pkg: any) =>
   latestVersion(pkg.name).then((version) => ({
@@ -19,7 +16,11 @@ const checkNpm = (pkg: any) =>
     name: pkg.name,
   }));
 
-readPkg(extensionPath).then((pkg: any) => {
+pkgDir().then(async (extensionPath: any) => {
+  const pkg = await fse.readJSON(path.resolve(extensionPath, "package.json"));
+
+  const conf = new CacheConf({ projectName: pkg.name });
+
   if (conf.has(pkg.name)) {
     // Skip checking if a valid entry exists
     return;
