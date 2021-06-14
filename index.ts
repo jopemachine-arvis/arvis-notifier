@@ -7,7 +7,6 @@ export const checkUpdate = () => {
     const subProcess = execa.command("node check.js", {
       windowsHide: true,
       cwd: __dirname,
-      detached: true,
       stdio: 'ignore',
     });
 
