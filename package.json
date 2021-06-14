@@ -1,6 +1,6 @@
 {
-  "name": "@jopemachine/arvis-notifier",
-  "version": "0.2.0",
+  "name": "arvis-notifier",
+  "version": "0.0.1",
   "description": "Update notifications for Arvis extension",
   "main": "dist/index.js",
   "scripts": {
