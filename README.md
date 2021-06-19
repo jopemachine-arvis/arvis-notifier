@@ -1,4 +1,5 @@
 # arvis-notifier
+[![CodeFactor](https://www.codefactor.io/repository/github/jopemachine/arvis-notifier/badge)](https://www.codefactor.io/repository/github/jopemachine/arvis-notifier)
 [![NPM download total](https://img.shields.io/npm/dt/arvis-notifier)](http://badge.fury.io/js/arvis-notifier)
 [![NPM version](https://badge.fury.io/js/arvis-notifier.svg)](http://badge.fury.io/js/arvis-notifier)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
