@@ -19,21 +19,16 @@ $ npm install --save arvis-notifier
 
 ## Usage
 
-### Example
+### Simple example
 
 ```js
-const arvish = require('arvish');
+const arvishNotifier = require('arvish-notifier');
 
-const { checkUpdate } = require('arvis-notifier');
-
-// Checks for available update
-checkUpdate();
-
-arvish.output([
-	{title: '🦄'},
-	{title: '🌈'}
-]);
+arvishNotifier();
 ```
+
+You don't need to call `arvish-notifier` directly if you are using [arvish](https://github.com/jopemachine/arvish) because arvish do this instead.
+
 
 ## Realted
 
