@@ -30,7 +30,7 @@ arvishNotifier();
 You don't need to call `arvish-notifier` directly if you are using [arvish](https://github.com/jopemachine/arvish) because arvish do this instead.
 
 
-## Realted
+## Related
 
 - [arvish](https://github.com/jopemachine/arvish) - Arvis workflow, plugin creator tools
 
