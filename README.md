@@ -33,3 +33,5 @@ You don't need to call `arvish-notifier` directly if you are using [arvish](http
 ## Realted
 
 - [arvish](https://github.com/jopemachine/arvish) - Arvis workflow, plugin creator tools
+
+- [arvis-extension-updater](https://github.com/jopemachine/arvis-extension-updater) - Arvis extension updater (only installed by npm)
