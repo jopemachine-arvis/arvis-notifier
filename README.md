@@ -9,7 +9,7 @@
 
 > Notify update for your [Arvis](https://github.com/jopemachine/arvis) extension
 
-This repository is inspired and cloned by [alfred-notifier](https://github.com/SamVerschueren/alfred-notifier/blob/master/readme.md)
+This lib is inspired and cloned from [alfred-notifier](https://github.com/SamVerschueren/alfred-notifier/blob/master/readme.md)
 
 ## Install
 
