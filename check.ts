@@ -3,9 +3,9 @@ import pkgDir from "pkg-dir";
 import latestVersion from "latest-version";
 import semver from "semver";
 import CacheConf from "cache-conf";
-import markLatest from "./lib/markLatest";
 import fse from "fs-extra";
 import path from "path";
+import markLatest from "./lib/markLatest";
 
 const ONE_DAY = 86400000;
 
@@ -16,8 +16,7 @@ const checkNpm = (pkg: any) =>
     name: pkg.name,
   }));
 
-const temp = __dirname.split(path.sep);
-const outer = temp.slice(0, temp.length - 2).join(path.sep);
+const outer = __dirname.split(path.sep).slice(0, -2).join(path.sep);
 
 pkgDir(outer).then(async (extensionPath: any) => {
   const pkg = await fse.readJSON(path.resolve(extensionPath, "package.json"));
