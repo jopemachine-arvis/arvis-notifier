@@ -9,9 +9,7 @@
   },
   "files": [
     "dist/**",
-    "index.d.ts",
-    "README.md",
-    "LICENSE"
+    "index.d.ts"
   ],
   "repository": {
     "type": "git",
@@ -19,6 +17,8 @@
   },
   "keywords": [
     "arvis",
+    "arvis-workflow",
+    "arvis-plugin",
     "arvis-extension",
     "arvish"
   ],
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/jopemachine/arvis-notifier/issues"
   },
-  "homepage": "https://github.com/jopemachine/arvis-notifier#readme",
+  "homepage": "https://github.com/jopemachine/arvis-notifier#README.md",
   "devDependencies": {
     "@types/fs-extra": "^9.0.11",
     "@types/node": "^15.6.1",
