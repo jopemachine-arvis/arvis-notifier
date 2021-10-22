@@ -6,6 +6,7 @@ import CacheConf from "cache-conf";
 import fse from "fs-extra";
 import path from "path";
 import markLatest from "./lib/markLatest";
+import { readJson5 } from "./lib/readJson5";
 
 const ONE_DAY = 86400000;
 
@@ -19,7 +20,7 @@ const checkNpm = (pkg: any) =>
 const outer = __dirname.split(path.sep).slice(0, -2).join(path.sep);
 
 pkgDir(outer).then(async (extensionPath: any) => {
-  const pkg = await fse.readJSON(path.resolve(extensionPath, "package.json"));
+  const pkg = await readJson5(path.resolve(extensionPath, "package.json")) as any;
   const conf = new CacheConf({ projectName: pkg.name });
 
   if (conf.has(pkg.name)) {

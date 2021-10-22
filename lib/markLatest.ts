@@ -1,6 +1,7 @@
 import path from "path";
 import fse from "fs-extra";
 import { checkFileExists } from "./util";
+import { readJson5 } from "./readJson5";
 
 export default async (extensionPath: string, latestVersion: string) => {
   const workflowFile = path.resolve(extensionPath, "arvis-workflow.json");
@@ -16,7 +17,7 @@ export default async (extensionPath: string, latestVersion: string) => {
     return;
   }
 
-  return fse.readJSON(file).then((json) => {
+  return readJson5(file).then((json: any) => {
     if (file === workflowFile) {
       json.latest = latestVersion;
     } else if (file === pluginFile) {
